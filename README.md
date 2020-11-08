@@ -25,24 +25,28 @@ Using regression, we will use the following attributes of cars to predict their 
 - car name: includes make and model
 
 ### Access
-*TODO*: Explain how you are accessing the data in your workspace.
+I'm loading the .csv file into the Registered datasets and then copying/pasting the code to access the dataset directly from the notebook.
 
 ## Automated ML
 *TODO*: Give an overview of the `automl` settings and configuration you used for this experiment
 
+
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
 *TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
-
+The model that I chose when tuning hyperparameters was the ensemble model GradientBooostingRegressor, which - like any other ensemble technique - uses a meta learner to start and then gets benefit of different regressors to improve on initial weaknesses. This model is superior to a single logistic or linear regressor, which doesn't offer advantage of many models at once.
+The hyperparameters surveyed and ranges selected for tuning are:
+max_depth from 3 to 11
+learning_rate from 0.1 to 100
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
