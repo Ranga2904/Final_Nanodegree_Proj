@@ -1,7 +1,7 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
 
 # Predicting car mileage
-In this project, we will first compare the efficacy of AutoML vs HyperConfig tuning of a GradientBoostingRegressor in predicting car mileage given certain details about the car. We will then deploy the most accurate model.
+In this project, we will first compare the efficacy of AutoML vs HyperConfig tuning of a GradientBoostingRegressor in predicting car mileage given certain details 
+about the car. We will then deploy the most accurate model.
 
 ## Project Set Up and Installation
 To set up this project in AzureML, please note the following:
@@ -37,10 +37,11 @@ I'm loading the .csv file into the Registered datasets and then copying/pasting 
 *TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
-The model that I chose when tuning hyperparameters was the ensemble model GradientBooostingRegressor, which - like any other ensemble technique - uses a meta learner to start and then gets benefit of different regressors to improve on initial weaknesses. This model is superior to a single logistic or linear regressor, which doesn't offer advantage of many models at once.
+The model that I chose when tuning hyperparameters was the ensemble model GradientBoostingRegressor, which - like any other ensemble technique - uses a meta learner 
+to start and then gets benefit of different regressors to improve on initial weaknesses. This model is superior to a single logistic or linear regressor, which 
+doesn't offer advantage of many models at once.
 The hyperparameters surveyed and ranges selected for tuning are:
-max_depth from 3 to 11
+max_depth from 3 to 11 - this hyperparameter 
 learning_rate from 0.1 to 100
 
 ### Results
