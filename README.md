@@ -1,19 +1,28 @@
 *NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
 
-# Your Project Title Here
-
-*TODO:* Write a short introduction to your project.
+# Predicting car mileage
+In this project, we will first compare the efficacy of AutoML vs HyperConfig tuning of a GradientBoostingRegressor in predicting car mileage given certain details about the car. We will then deploy the most accurate model.
 
 ## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
+To set up this project in AzureML, please note the following:
+(1) Download the Auto MPG dataset and upload to Registered Datasets
+(2) Download all .ipynb and .py files - note that both .ipynb files reference the train.py which is in the training folder.
 
 ## Dataset
 
 ### Overview
-*TODO*: Explain about the data you are using and where you got it from.
+The data that I'm using is the Auto MPG dataset available from the UCI Machine Learning Repository https://archive.ics.uci.edu/ml/datasets/auto+mpg
 
 ### Task
-*TODO*: Explain the task you are going to be solving with this dataset and the features you will be using for it.
+Using regression, we will use the following attributes of cars to predict their mileage:
+- number of cylinders
+- displacement
+- horsepower
+- weight
+- acceleration
+- model year
+- origin i.e. year of car
+- car name: includes make and model
 
 ### Access
 *TODO*: Explain how you are accessing the data in your workspace.
