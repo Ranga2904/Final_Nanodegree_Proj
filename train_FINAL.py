@@ -54,14 +54,14 @@ def main():
 
     x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.33,random_state=42)
 
-    model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
+    model = GradientBoostingRegressor(max_depth=args.max_depth, learning_rate=args.learning_rate).fit(x_train, y_train)
 
     accuracy = model.score(x_test, y_test)
     
     run = Run.get_context()
     run.log("Accuracy", np.float(accuracy))
-    run.log("Regularization Strength:", np.float(args.C))
-    run.log("Max iterations:", np.int(args.max_iter))
+    run.log("Max depth:", np.float(args.max_depth))
+    run.log("Learning rate:", np.int(args.learning_rate))
 
 if __name__ == '__main__':
     main()
