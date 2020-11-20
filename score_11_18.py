@@ -11,7 +11,6 @@ def init():
 
 def run(data):
     try:
-        data = np.array(json.loads(data))
         result = model.predict(data)
         # You can return any data type, as long as it is JSON serializable.
         return result.tolist()
