@@ -3,8 +3,6 @@ import numpy as np
 import os
 import joblib, pickle
 from azureml.core import Model
-import xgboost
-from xgboost import XGBRegressor
 
 
 def init():
