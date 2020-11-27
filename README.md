@@ -23,6 +23,8 @@ Using regression, we will use the following attributes of cars to predict their 
 - model year
 - origin i.e. year of car
 
+This model permits car manufacturers to optimize their products for minimal fuel consumption, which is not only good for the environment but can also provide credits.
+
 ### Access
 I'm loading the .csv file as a registered dataset and then copying/pasting the code to access the registered dataset directly from the notebook.
 
@@ -45,10 +47,11 @@ to start and then gets benefit of different regressors to improve on initial wea
 doesn't offer advantage of many models at once.
 The hyperparameters surveyed and ranges selected for tuning are:
 - max_depth values of 2 and 9 - this hyperparameter limits the depth of a tree and avoids an overly complex fitting and excessive variance i.e. poor model generalization to unseen data.
-- learning_rate of 1 and 5
+- learning_rate of 1 and 5 - this hyperparameter shrinks tree size and as learning rate shrinks, the model needs more trees to maintain performance.
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+The hyperparameter tuning model can be improved by setting learning rates smaller
 
 *TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
