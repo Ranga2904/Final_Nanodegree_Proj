@@ -29,7 +29,7 @@ This model permits car manufacturers to optimize their products for minimal fuel
 I'm loading the .csv file as a registered dataset and then copying/pasting the code to access the registered dataset directly from the notebook.
 
 ## Automated ML
-As this is a regression problem, the task was chosen appropriately and since the hyperparameter tuning was done on GradientBoostingRegressor - whose default 
+As this is a regression problem, the task was chosen as such and since the hyperparameter tuning was done on GradientBoostingRegressor - whose default 
 model.score is the R-squared parameter - I chose the 'R2_score' as the primary metric for AutoML. 3-fold cross validation was appropriate given timing limits, with another default model being k=10. 
 
 Since we're trying to predict mileage, 'mpg' was selected as the target variable.
@@ -79,10 +79,11 @@ The deployed model is the best performer from AutoML - a VotingEnsemble regresso
 ## Screen Recording
 A screencast with the following details can be found at this link - https://youtu.be/sjcRizr4XVE
 - A working model
-- Demo of the deployed  model
+- Demo of the deployed model
 - Demo of a sample request sent to the endpoint and its response
 
 ## Opportunities to improve
 Opportunities for the future include:
+- converting registered model to ONNX format (my next step once I confirm that my deployment is done accurately)
 - adjusting features in dataset to address cardinality issue that AutoML had to work through
-- deploying best model to ONNX format (my next step once I confirm that my deployment is done accurately)
+- implement suggestions above around data imputation and encoding
