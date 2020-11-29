@@ -10,6 +10,7 @@ The schematic below illustrates the path that is detailed in the rest of this wr
 To set up this project in AzureML, please:
 - download the Auto MPG dataset and register as a dataset in Azure ML studio under the name 'mpg'
 - download all .ipynb and .py files - note that the hyperparameter_11_29_FINAL.ipynb notebook uses train_11_29.py as an entry script while automl_11_29_FINAL.ipynb uses score_11_29_FINAL.py  as a scoring script.
+- when running the hyperparameter config experiments, ensure that the train_11_29.py entry script is in the created 'training' subfolder.
 
 
 ## Dataset
