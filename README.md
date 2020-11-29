@@ -46,6 +46,7 @@ Below are snapshots of the RunDetails widget for AutoML and a screenshot of the 
 ###### Best model and runID
 ![Best model and runID](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_2_AutoML_bestmodel_runID.png)
 
+
 ## Hyperparameter Tuning
 The model that I chose when tuning hyperparameters was the ensemble model GradientBoostingRegressor, which - like any other ensemble technique - uses a meta learner 
 to start and then gets benefit of different regressors to improve on initial weaknesses. Like any ensemble approach, this is superior to any single regressor
@@ -68,7 +69,12 @@ I got a R-squared score of 0.82 with a learning rate of 1 and max_depth of 2. Op
 The healthy endpoint is seen below
 ![Healthy endpoint](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_3_AutoML_healthy_endpoint.png)
 
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+The deployed model is the best performer from AutoML - a VotingEnsemble regressor that has been registered - and as seen above, has an active endpoint at the specified scoring URI. To query the endpoint:
+- first replace existing values for cylinders, displacement, horsepower, weight, acceleration, model yr, and origin parameters
+- these values are now part of a dictionary that is converted to json for inputting to a scoring script
+- run the cell with this code. This results in the scoring script 'score_11_29_FINAL' running the saved registered model and producing a predicted mileage
+- that predicted mileage is the output.
+
 
 ## Screen Recording
 A screencast with the following details can be found at this link - https://youtu.be/sjcRizr4XVE
