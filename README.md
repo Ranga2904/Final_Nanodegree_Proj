@@ -34,10 +34,12 @@ model.score is the R-squared parameter - I chose the 'R2_score' as the primary m
 
 Since we're trying to predict mileage, 'mpg' was selected as the target variable.
 
-
-
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
+The best AutoML model was a hard VotingClassifier with an R-square of 0.868. It didn't employ any regularization and weighed the predictions of 100 different estimators. Options to improve this model include:
+- encoding car model/make
+
+
 
 *TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
@@ -46,12 +48,14 @@ The model that I chose when tuning hyperparameters was the ensemble model Gradie
 to start and then gets benefit of different regressors to improve on initial weaknesses. This model is superior to a single logistic or linear regressor, which 
 doesn't offer advantage of many models at once.
 The hyperparameters surveyed and ranges selected for tuning are:
-- max_depth values of 2 and 9 - this hyperparameter limits the depth of a tree and avoids an overly complex fitting and excessive variance i.e. poor model generalization to unseen data.
-- learning_rate of 1 and 5 - this hyperparameter shrinks tree size and as learning rate shrinks, the model needs more trees to maintain performance.
+- max_depth values of 2 and 5 - this hyperparameter limits the depth of a tree and avoids an overly complex fitting and excessive variance i.e. poor model generalization to unseen data.
+- learning_rate of 1 and 10 - this hyperparameter shrinks tree size and as learning rate shrinks, the model needs more trees to maintain performance.
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
-The hyperparameter tuning model can be improved by setting learning rates smaller
+I got a R-squared score of 0.82 with a learning rate of 1 and max_depth of 2. Options to improve this model include:
+- setting learning rate lower to 0.1 and increasing max depth to permit improved training performance
+- encoding car model/make
 
 *TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
 
@@ -65,5 +69,7 @@ The hyperparameter tuning model can be improved by setting learning rates smalle
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
 
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+## Opportunities to improve
+Opportunities for the future include:
+- adjusting features in dataset to address cardinality issue that AutoML had to work through
+- deploying best model to ONNX format
