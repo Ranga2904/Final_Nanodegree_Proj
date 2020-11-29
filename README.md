@@ -64,7 +64,7 @@ I got a R-squared score of 0.82 with a learning rate of 1 and max_depth of 2. Op
 
 
 ## Screen Recording
-A screencast with the following details can be found at this link - https://youtu.be/dQridKJM0uY
+A screencast with the following details can be found at this link - https://youtu.be/sjcRizr4XVE
 - A working model
 - Demo of the deployed  model
 - Demo of a sample request sent to the endpoint and its response
