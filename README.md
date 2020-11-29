@@ -1,7 +1,10 @@
 
 # Predicting car mileage
 In this project, we will first compare the accuracy of AutoML vs HyperConfig's hyperparameter tuning of a GradientBoostingRegressor in predicting car mileage given certain details about the car. We will then deploy the most accurate model to get an active endpoint that can be queried using those details to return a predicted mileage. 
+
 The schematic below illustrates the path that is detailed in the rest of this write-up
+![Architecture schematic](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Capstone_Pipeline.png)
+
 
 ## Project Set Up and Installation
 To set up this project in AzureML, please:
