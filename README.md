@@ -35,33 +35,40 @@ model.score is the R-squared parameter - I chose the 'R2_score' as the primary m
 Since we're trying to predict mileage, 'mpg' was selected as the target variable.
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 The best AutoML model was a hard VotingClassifier with an R-square of 0.868. It didn't employ any regularization and weighed the predictions of 100 different estimators. Options to improve this model include:
-- encoding car model/make
+- encoding car model/make rather than dropping this column
+- averaging feature values to impute missing data rather than dropping those instances
 
-
-
-*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+Below are snapshots of the RunDetails widget for AutoML and a screenshot of the best model and run ID
+###### RunDetails widget showing run details and progress
+![RunDetails widget 1](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_1_AutoML_runs_1.png)
+![RunDetails widget 2](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_1_AutoML_runs_2.png)
+###### Best model and runID
+![Best model and runID](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_2_AutoML_bestmodel_runID.png)
 
 ## Hyperparameter Tuning
 The model that I chose when tuning hyperparameters was the ensemble model GradientBoostingRegressor, which - like any other ensemble technique - uses a meta learner 
-to start and then gets benefit of different regressors to improve on initial weaknesses. This model is superior to a single logistic or linear regressor, which 
-doesn't offer advantage of many models at once.
+to start and then gets benefit of different regressors to improve on initial weaknesses. Like any ensemble approach, this is superior to any single regressor
 The hyperparameters surveyed and ranges selected for tuning are:
 - max_depth values of 2 and 5 - this hyperparameter limits the depth of a tree and avoids an overly complex fitting and excessive variance i.e. poor model generalization to unseen data.
 - learning_rate of 1 and 10 - this hyperparameter shrinks tree size and as learning rate shrinks, the model needs more trees to maintain performance.
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 I got a R-squared score of 0.82 with a learning rate of 1 and max_depth of 2. Options to improve this model include:
 - setting learning rate lower to 0.1 and increasing max depth to permit improved training performance
-- encoding car model/make
+- encoding car model/make rather than dropping this column
+- averaging feature values to impute missing data rather than dropping those instances
 
-*TODO* Remember to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+![RunDetails widget showing child runs](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_4_HyperDrive_child_runs.png)
+###### Best Hyperdrive model trained with its hyperparameter settings
+![Best model and runID](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_4_HyperDrive_bestrunID_hyperparams.png)
+
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+The healthy endpoint is seen below
+![Healthy endpoint](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_3_AutoML_healthy_endpoint.png)
 
+*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 ## Screen Recording
 A screencast with the following details can be found at this link - https://youtu.be/sjcRizr4XVE
@@ -72,4 +79,4 @@ A screencast with the following details can be found at this link - https://yout
 ## Opportunities to improve
 Opportunities for the future include:
 - adjusting features in dataset to address cardinality issue that AutoML had to work through
-- deploying best model to ONNX format
+- deploying best model to ONNX format (my next step once I confirm that my deployment is done accurately)
