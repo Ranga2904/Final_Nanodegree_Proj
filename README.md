@@ -44,12 +44,14 @@ The best AutoML model was a hard VotingClassifier with an R-square of 0.868. It 
 - encoding car model/make rather than dropping this column
 - averaging feature values to impute missing data rather than dropping those instances
 
-Below are snapshots of the RunDetails widget for AutoML and a screenshot of the best model and run ID
+Below are snapshots of the RunDetails widget for AutoML and screenshots of the best model and run ID
 ###### RunDetails widget showing run details and progress
 ![RunDetails widget 1](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_1_AutoML_runs_1.png)
 ![RunDetails widget 2](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_1_AutoML_runs_2.png)
 ###### Best model and runID
 ![Best model and runID](https://github.com/Ranga2904/Final_Nanodegree_Proj/blob/main/Screenshot_2_AutoML_bestmodel_runID.png)
+
+###### Best estimator from best model
 
 
 ## Hyperparameter Tuning
